@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 @RunWith(Parameterized.class)
-public class TestingICPC1 {
+public class TestingLychrelSearch {
 	private int baseInput; //the input 
 	private long numberInBase10; //the 2nd input 
 	
@@ -24,7 +24,7 @@ public class TestingICPC1 {
 	}
 	
 	//Constructor for Parametertest
-	public TestingICPC1(int input1, long input2, String expectedResult) {
+	public TestingLychrelSearch(int input1, long input2, String expectedResult) {
 		this.baseInput = input1;
 		this.numberInBase10 = input2; 
 		this.output = expectedResult; 
