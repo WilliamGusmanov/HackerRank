@@ -1,15 +1,17 @@
+package hwpackage;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class Main {
+public class ICPCProblem1 {
 
 
     public static void main(String[] args) throws IOException {
         BufferedReader stdin;
-
+        	
         int base;
         Long number;
         stdin = new BufferedReader(new InputStreamReader(System.in));
@@ -23,10 +25,10 @@ public class Main {
           String[] strings = inputs.get(i).split(" ");
           base = Integer.parseInt(strings[0]);
           number = Long.parseLong(strings[1]);
-          ICPCProblem(base,number);
+          System.out.println(ICPCProblem(base,number));
         }
     }
-    public static void ICPCProblem(int base, Long number){
+    public static String ICPCProblem(int base, Long number){
     	int count = 0;
     	boolean foundpalindrome = false;
         ArrayList<Integer> currentNum = convert(base, number);
@@ -37,10 +39,12 @@ public class Main {
             count++;
         }
         if (foundpalindrome){
-            System.out.println(count + " " + currentNum.size());
+        	return count + " " + currentNum.size();
+            //System.out.print(count + " " + currentNum.size());
         }
         else {
-            System.out.println(">500");
+        	return ">500";	
+           //System.out.println(">500");
         }
     }
     public static Boolean checkPalindrome(ArrayList<Integer> list){
