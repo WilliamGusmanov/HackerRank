@@ -10,15 +10,15 @@ def main():
     while not found:
       digitSum = sumDigits(temp)
       factors = primeFactors(temp)
-      #print("factors of : ",temp, "is", factors)
+      #print("prime factors of : ",temp, "is", factors)
       if len(factors)==1:
         temp = temp + 1
         continue
       else:
           primeSum = sumPrimes(factors)
           if (digitSum==primeSum):
-          # print("DigitSUm " , digitSum)
-          #  print("prime SUm " ,primeSum)
+            #print("Digit Sum " , digitSum)
+            #print("prime Sum " ,primeSum)
             found = True
             answers.append(temp)
       temp = temp + 1
@@ -28,7 +28,7 @@ def main():
  
  
 def isPrime(num):
-  ##print("Entered prime")
+  #print("Entered prime")
   sqrt = (int)(math.sqrt(num))
   for i in range(2,sqrt+1):
     if (num%i==0):
@@ -58,26 +58,24 @@ def sumPrimes(factors):
   for number in factors:
     #print("number: " , number)
     #find digits in each factor
-    if number > 10:
-      temp = number
+    temp = number
       #print("temp: ", temp)
-      while(temp > 1):
-        digit = temp % 10
-        sum = sum + digit
-        temp = int(temp / 10 )
-    else:
-      sum = sum + number
+    while(temp > 0):
+      digit = temp % 10
+      sum = sum + digit
+      temp = int(temp / 10 )
   return sum
 
 def sumDigits(number):
   sum = 0
   temp = number
+  #print("digits of ", number, ": ", end = ' ')
   while(temp > 0):
     digit = temp % 10
+   # print(digit, end = ' ')
     sum = sum + digit
     temp = int(temp / 10 )
-
+  #print()
   return sum
 
 main()
-
