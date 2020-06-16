@@ -1,2 +1,1 @@
-#Coding Challenges
-My solutions to problems found on HackerRank, LeetCode, geeks4geeks..etc. 
+The solutions to coding problems that I have worked on and am content with. 
